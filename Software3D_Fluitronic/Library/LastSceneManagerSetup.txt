@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Paletizador/Escenas/@ConfiMosaico.unity
+- path: Assets/Paletizador/Escenas/@ConfiPallet.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

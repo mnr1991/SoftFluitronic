@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Paletizador/Escenas/@Inicio.unity
+    path: Assets/Scenes/@Inicio.unity
     guid: 2b8371e892734a34d9a9a2dc05f6f151
   - enabled: 1
     path: Assets/Paletizador/Escenas/@ConfiProyecto.unity
