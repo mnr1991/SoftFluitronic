@@ -34,6 +34,11 @@ namespace Assets.Paletizador.Prefabs
                     _color = ConfigMosaico.colors.selectedColor;
                     ConfigMosaico.image.color = _color;
                     break;
+                case "@Lanzar":
+                    Titulo.text = "LANZAR";
+                    _color = Lanzar.colors.selectedColor;
+                    Lanzar.image.color = _color;
+                    break;
                 default:
                     break;
 

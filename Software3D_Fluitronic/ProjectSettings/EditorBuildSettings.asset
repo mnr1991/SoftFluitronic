@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Paletizador/Escenas/@ConfiMosaico.unity
     guid: 65154c75c7180064c849ae5817fee15c
+  - enabled: 1
+    path: Assets/Paletizador/Escenas/@Lanzar.unity
+    guid: 1f33228be0b850544936845a82a49ab3
   m_configObjects: {}

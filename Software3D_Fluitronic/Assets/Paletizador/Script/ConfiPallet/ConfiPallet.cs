@@ -14,6 +14,7 @@ namespace Assets.Paletizador.Script.ConfiPallet
         private Pallet actual;
         private Pallet[] listaPallets;
         public GameObject[] Pallets3D;
+      
         // Start is called before the first frame update
         void Start()
         {
@@ -67,6 +68,7 @@ namespace Assets.Paletizador.Script.ConfiPallet
                 indice = 0;
                 actual = Pallets[indice];
                 GuardaPallet.Instancia.MiPallet = actual;
+               
             }
             
             Texto.text = actual.Nombre;
