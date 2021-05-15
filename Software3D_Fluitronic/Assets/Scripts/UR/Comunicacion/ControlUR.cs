@@ -49,7 +49,7 @@ namespace Assets.Scripts.UR.Comunicacion
             Posicion_J6 = 0.0;
 
             // Robot IP Address
-            IP= "192.168.63.130";
+            IP= "192.168.0.2";
             Puerto = 30003;
 
             

@@ -6,6 +6,7 @@ namespace Assets.Scripts.Escenas
     public class GuardaPallet : MonoBehaviour
     {
         public Pallet MiPallet { get; set; }
+        public int indice { get; set; }
         public static GuardaPallet Instancia { get; private set; }
         private void Awake()
         {

@@ -8,46 +8,48 @@ namespace Assets.Paletizador.Script.ConfiPallet
 {
     public class ConfiPallet : MonoBehaviour
     {
-        public TextMeshProUGUI Texto;
+        public TextMeshProUGUI Nombre1;
+        public TextMeshProUGUI Nombre2;
         public List<Pallet> Pallets { get; set; }
         private int indice;
         private Pallet actual;
         private Pallet[] listaPallets;
         public GameObject[] Pallets3D;
-      
+        public TMP_InputField inputAncho;
+        public TMP_InputField inputLargo;
+        public TMP_InputField inputAlto;
+        public TMP_InputField inputPeso;
+
+
         // Start is called before the first frame update
         void Start()
         {
             for (int i = 0; i < Pallets3D.Length; i++)
             {
                 Pallets3D[i].SetActive(false);
+              
             }
             // Creamos lista de pallets
             Pallets = new List<Pallet>();
             var pallet = new Pallet();
-            pallet.Alto = 100.0;
-            pallet.Ancho = 800.0;
-            pallet.Largo = 1200.0;
-            pallet.Nombre = "Europeo";
-            Pallets.Add(pallet);
-            pallet = new Pallet();
-            pallet.Alto = 100.0;
+            pallet.Alto = 144.0;
             pallet.Ancho = 1000.0;
             pallet.Largo = 1200.0;
             pallet.Nombre = "Americano";
             Pallets.Add(pallet);
             pallet = new Pallet();
-            pallet.Alto = 100.0;
+            pallet.Alto = 144.0;
             pallet.Ancho = 800.0;
             pallet.Largo = 600.0;
-            pallet.Nombre = "Medio Pallet";
+            pallet.Nombre = "Medio Europeo";
             Pallets.Add(pallet);
             pallet = new Pallet();
-            pallet.Alto = 100.0;
+            pallet.Alto = 144.0;
             pallet.Ancho = 800.0;
             pallet.Largo = 1200.0;
-            pallet.Nombre = "Europeo2";
+            pallet.Nombre = "Europeo";
             Pallets.Add(pallet);
+            
 
             listaPallets = Pallets.ToArray();
             if (GuardaPallet.Instancia.MiPallet != null)
@@ -65,14 +67,17 @@ namespace Assets.Paletizador.Script.ConfiPallet
             }
             else
             {
-                indice = 0;
+                indice = 2;
                 actual = Pallets[indice];
                 GuardaPallet.Instancia.MiPallet = actual;
                
             }
-            
-            Texto.text = actual.Nombre;
+
+            ActualizaTextos();
             Pallets3D[indice].SetActive(true);
+            GuardaPallet.Instancia.indice = indice;
+
+
         }
 
         // Update is called once per frame
@@ -93,7 +98,9 @@ namespace Assets.Paletizador.Script.ConfiPallet
             Pallets3D[indice].SetActive(true);
             actual = listaPallets[indice];
             GuardaPallet.Instancia.MiPallet = actual;
-            Texto.text = actual.Nombre;
+            ActualizaTextos();
+            GuardaPallet.Instancia.indice = indice;
+
         }
         public void Anterior()
         {
@@ -107,7 +114,19 @@ namespace Assets.Paletizador.Script.ConfiPallet
             Pallets3D[indice].SetActive(true);
             actual = listaPallets[indice];
             GuardaPallet.Instancia.MiPallet = actual;
-            Texto.text = actual.Nombre;
+            ActualizaTextos();
+            GuardaPallet.Instancia.indice = indice;
+
+        }
+
+        private void ActualizaTextos()
+        {
+            Nombre1.text = actual.Nombre;
+            Nombre2.text = actual.Nombre;
+            inputAlto.text = listaPallets[indice].Alto.ToString() + " mm";
+            inputAncho.text = listaPallets[indice].Ancho.ToString() + " mm";
+            inputLargo.text = listaPallets[indice].Largo.ToString() + " mm";
+            inputPeso.text = listaPallets[indice].Peso.ToString() + " Kg";
         }
 
       
