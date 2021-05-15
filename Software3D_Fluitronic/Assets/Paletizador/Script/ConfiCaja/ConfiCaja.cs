@@ -83,6 +83,8 @@ namespace Assets.Paletizador.Script.ConfiCaja
             inputAncho.text = (cajaActual.Ancho).ToString("F") + " mm";
             inputLargo.text = (cajaActual.Largo).ToString("F") + " mm";
             inputPeso.text = (cajaActual.Peso).ToString("F") + " Kg";
+
+            //fjhfjgkjh
         }
     }
 }
