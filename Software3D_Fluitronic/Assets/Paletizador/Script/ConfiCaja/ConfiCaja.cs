@@ -46,9 +46,9 @@ namespace Assets.Paletizador.Script.ConfiCaja
             float altura =(float) Convert.ToDouble(inputAltura.text.Replace("mm",""));
             float x, y, z;
             x = GameCaja.transform.localScale.x;
-            z = altura;
-            y = GameCaja.transform.localScale.y;
-            cajaActual.Alto = z;
+            y = altura;
+            z = GameCaja.transform.localScale.z;
+            cajaActual.Alto = y;
             GameCaja.transform.localScale=new Vector3(x,y,z);
             ActualizaTexto();
         }
@@ -70,10 +70,16 @@ namespace Assets.Paletizador.Script.ConfiCaja
             float altura = (float)Convert.ToDouble(inputLargo.text.Replace("mm", ""));
             float x, y, z;
             x = GameCaja.transform.localScale.x;
-            y = altura;
-            z = GameCaja.transform.localScale.z;
-            cajaActual.Largo = y;
+            z = altura;
+            y = GameCaja.transform.localScale.y;
+            cajaActual.Largo = z;
             GameCaja.transform.localScale = new Vector3(x, y, z);
+            ActualizaTexto();
+        }
+        public void actualizaPeso()
+        {
+            float altura = (float)Convert.ToDouble(inputPeso.text.Replace("Kg", ""));
+            cajaActual.Peso = altura;
             ActualizaTexto();
         }
         private void ActualizaTexto()

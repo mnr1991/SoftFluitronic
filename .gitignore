@@ -10,6 +10,12 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
+#Ignoramos .prefab  .blend .fbx .7z .tar
+*.prefab
+*.blend
+*.fbx
+*.7z
+*.tar
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 

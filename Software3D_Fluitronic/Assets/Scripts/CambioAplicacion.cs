@@ -20,6 +20,7 @@ namespace Assets.Scripts
         public void Salir()
         {
             Application.Quit();
+//Prueba
         }
     }
 }
